@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ejercicio</title>
+	<style>
+		body{
+					}
+		.cuadro{
+			height: 500px;
+			width: 900px;
+			background: black;
+			position: absolute;
+			top: 100px;
+			left: 200px;
+			border: solid #c237db 5px;
+			border-radius: 50px;
+			z-index: 1;
+		}
+		.titulo{
+			height: 100px;
+			width: 250px;
+			background: purple;
+			position: absolute;
+			top: 60px;
+			left: 500px;
+			border: solid darkorchid; 4px;
+			border-radius: 10px;
+			z-index: 2;
+			text-align: center;
+			font-size: 50px;
+		}
+		.boton1{
+			height: 90px;
+			width: 90px;
+			background: purple;
+			position: absolute;
+			top: 500px;
+			left: 780px;
+			border: solid darkorchid 4px;
+			border-radius: 40px;
+			z-index: 2;
+			text-align: center;
+			font-size: 80px;
+		}
+		.boton2{
+			height: 90px;
+			width: 90px;
+			background: purple;
+			position: absolute;
+			top: 500px;
+			left: 890px;
+			border: solid darkorchid 4px;
+			border-radius: 40px;
+			z-index: 2;
+			text-align: center;
+			font-size: 80px;
+		}
+		.boton3{
+			height: 90px;
+			width: 90px;
+			background: purple;
+			position: absolute;
+			top: 500px;
+			left: 1000px;
+			border: solid darkorchid 4px;
+			border-radius: 40px;
+			z-index: 2;
+			text-align: center;
+			font-size: 80px;
+		}
+		.boton-sonido{
+			height: 100px;
+			width: 100px;
+			background: purple;
+			background: url(descarga.png);
+			background-size: cover;
+			position: absolute;
+			top: 80px;
+			left: 170px;
+			border: solid darkorchid 4px;
+			border-radius: 40px;
+			z-index: 2;
+			text-align: center;
+			font-size: 80px;
+		}
+		.cuadrado{
+			height: 60px;
+			width: 250px;
+			background: black;
+			position: absolute;
+			top: 400px;
+			left: 150px;
+			border: solid #c237db 3px;
+			z-index: 1;
+			font-size: 50px;
+			color: whitesmoke;
+
+		}
+		.equis{
+			height: 70px;
+			width: 70px;
+			background: purple;
+			position: absolute;
+			top: 395px;
+			left: 400px;
+			border: solid darkorchid 4px;
+			border-radius: 20px;
+			z-index: 2;
+			text-align: center;
+			font-size: 50px;
+			
+
+		}
+	</style>
+</head>
+<body>
+	<script>
+		function boto1() {
+			music.innerHTML='Lonely<br><br><br><br>Artista:Akon<br>Duracion:03:55'
+			music.style.height='60px'
+			music.style.width='250px'
+			equis.style.left='400px'
+			equis.innerHTML='[ ]'
+
+		}
+
+		function boto2() {
+			music.innerHTML='Efecto<br><br><br><br>Artista:Bad bunny<br>Duracion:03:33'
+			music.style.height='60px'
+			music.style.width='250px'
+			equis.style.left='400px'
+			equis.innerHTML='[ ]'
+
+		}
+		function boto3() {
+			music.innerHTML='Aranjuez<br><br><br><br>Artista:Alkolirykoz<br>Duracion:04:13'
+			music.style.height='60px'
+			music.style.width='250px'
+			equis.style.left='400px'
+			equis.innerHTML='[ ]'
+
+		}
+
+		function agrandar(){
+			music.style.height='400px'
+			music.style.width='400px'
+			equis.style.left='500px'
+			equis.innerHTML='X'
+			
+
+
+			
+		}
+		function achiquitar(){
+			music.style.height='60px'
+			music.style.width='250px'
+			equis.style.left='400px'
+			equis.innerHTML='[ ]'
+
+		}
+		
+	</script>
+	<div class="cuadro"></div>
+	<div class="titulo">reproductor</div>
+	<audio src="pua.mp3" id="clic"></audio>
+	<audio src="lonely.mp3" id="lonely"></audio>
+	<audio src="aranjuez.mp3" id="aranjuez"></audio>
+	<audio src="efecto.mp3" id="efecto"></audio>
+	<div class="boton1" id="boto1" onmousedown="clic.play();boto1();lonely.play()" onmouseup="lonely.pause()">1</div>
+    <div class="boton2" onmousedown="clic.play();boto2();efecto.play()" onmouseup="efecto.pause()">2</div>
+    <div class="boton3" onmousedown="clic.play();boto3();aranjuez.play()" onmouseup="aranjuez.pause()">3</div>
+    <div class="boton-sonido"></div>
+    <div class="cuadrado" id="music"> </div>
+    <div class="equis" id="equis" onmousedown="agrandar()" onmouseup="achiquitar()">[ ]</div>
+    
+</body>
+</html>
